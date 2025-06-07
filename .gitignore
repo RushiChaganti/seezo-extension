@@ -1,0 +1,10 @@
+.venv/
+.env
+*.log
+*.pid
+*.egg-info/
+.cache/             # pytest cache
+.pytest_cache/
+coverage.xml
+htmlcov/
+

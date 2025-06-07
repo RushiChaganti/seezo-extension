@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seezo Security Analysis Results</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Security Analysis Results</h1>
+            <div class="url-info">
+                <div>URL: <span id="analyzed-url">Loading...</span></div>
+                <div>Analyzed: <span id="analyzed-time">Loading...</span></div>
+                <div>Model: <span id="model-used">Loading...</span></div>
+            </div>
+        </header>
+        
+        <div id="loading-container" class="section">
+            <div class="loading-spinner"></div>
+            <p>Loading analysis results...</p>
+        </div>
+        
+        <div id="error-container" class="section" style="display: none;">
+            <div class="error-icon">⚠️</div>
+            <p id="error-message">An error occurred</p>
+        </div>
+        
+        <div id="results-container" style="display: none;">
+            <section class="section vulnerabilities">
+                <h2>Vulnerabilities (<span id="vuln-count">0</span>)</h2>
+                <div id="vulnerabilities-list" class="items-list">
+                    <!-- Vulnerabilities will be inserted here -->
+                </div>
+            </section>
+            
+            <section class="section sensitive-assets">
+                <h2>Sensitive Assets (<span id="assets-count">0</span>)</h2>
+                <div id="assets-list" class="items-list">
+                    <!-- Sensitive assets will be inserted here -->
+                </div>
+            </section>
+            
+            <section class="section recommendations">
+                <h2>Recommendations</h2>
+                <div id="recommendations-list">
+                    <!-- Recommendations will be inserted here -->
+                </div>
+            </section>
+            
+            <section class="section confidence">
+                <h2>Analysis Confidence</h2>
+                <div class="confidence-meter">
+                    <div class="confidence-value" id="confidence-score">0%</div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="results.js"></script>
+</body>
+</html> 
