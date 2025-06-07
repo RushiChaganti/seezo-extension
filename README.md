@@ -35,21 +35,43 @@ The plugin consists of two main components:
 
 ## Setup
 
-1. Install the Python backend:
+1. Install Seezo using the installation script:
 ```bash
-cd backend
-pip install -r requirements.txt
-python setup.py install
+# Make the script executable
+chmod +x install.sh
+
+# Run the installation script
+./install.sh
 ```
 
-2. Load the browser extension:
-- Chrome: Load unpacked extension from `extension/` directory
-- Firefox: Load temporary extension from `extension/` directory
+The script will:
+- Set up a Python virtual environment with Python 3.11.6
+- Install all required dependencies
+- Install Ollama (optional, for local AI processing)
+- Generate an API key for local backend authentication
+- Create necessary configuration files
 
-3. Configure AI models:
-- Open extension settings
-- Add API keys for desired models
-- Select default model
+2. Start the backend server:
+```bash
+# Activate the virtual environment
+source .venv/bin/activate
+
+# Start the server
+seezo
+```
+
+3. Install the browser extension:
+- Chrome:
+  1. Open Chrome and go to `chrome://extensions/`
+  2. Enable "Developer mode" in the top right
+  3. Click "Load unpacked" and select the `extension/` directory
+  4. Open the extension settings and enter the API key generated during installation
+
+- Firefox:
+  1. Open Firefox and go to `about:debugging#/runtime/this-firefox`
+  2. Click "Load Temporary Add-on"
+  3. Navigate to the `extension/` directory and select any file
+  4. Open the extension settings and enter the API key generated during installation
 
 ## Development
 
