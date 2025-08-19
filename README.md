@@ -2,6 +2,9 @@
 
 A privacy-first browser extension that leverages local AI models to analyze web interfaces for security vulnerabilities and sensitive asset exposure.
 
+
+## This Repo is being Archived. 
+
 ## Features
 
 - 🔒 Local-only processing - No data leaves your machine
